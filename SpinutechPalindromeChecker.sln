@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1500
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinutechPalindromeChecker", "SpinutechPalindromeChecker\SpinutechPalindromeChecker.csproj", "{57B7C17B-0AC5-4F10-BEDB-5AFE8D933186}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57B7C17B-0AC5-4F10-BEDB-5AFE8D933186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B7C17B-0AC5-4F10-BEDB-5AFE8D933186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B7C17B-0AC5-4F10-BEDB-5AFE8D933186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B7C17B-0AC5-4F10-BEDB-5AFE8D933186}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C71E0F7-2807-4327-8F27-E2C6925B1919}
+	EndGlobalSection
+EndGlobal

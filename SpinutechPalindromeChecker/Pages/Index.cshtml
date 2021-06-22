@@ -1,0 +1,89 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Palindrome Checker</h1>
+            <p>Welcome to Spinutech's Palindrome Checker App. Enter a non-zero whole number (up to 19 digits) into the input field. You can then check if that value is a palindrome using either server-side (causing the page to refresh) or client-side (the page does not refresh) code.</p>
+        </div>
+    </div>
+</div>
+<div class="container palindromField" id="mainPalindromeContainer">
+
+    <!-- Client side code gets injected here-->
+    <div id="clientSidePalindrome" style="display:none">
+        <div id="api-content-1" class="row palindrome-stats" role="alert"></div>
+        <div id="api-content-2" class="row display-results" role="alert"></div>
+        <div id="api-content-3" class="row display-results" role="alert"></div>
+    </div>
+
+    <!-- Server side code gets injected here -->
+    <div id="serverSidePalindrome">
+        @if (Model.palindromeResults.Count() == 2)
+        {
+            string isOrIsNot = "IS";
+            string successOrNot = "SUCCESS!";
+            string glyphForPalindrome = "<span class=\"glyphicon glyphicon-thumbs-up palindrome-glyph-success\" aria-hidden=\"true\"></span>";
+            if (!Model.isAPalindrome)
+            {
+                isOrIsNot = "IS NOT";
+                successOrNot = "Sorry...";
+                glyphForPalindrome = "<span class=\"glyphicon glyphicon-thumbs-down palindrome-glyph-failure\" aria-hidden=\"true\"></span>";
+            }
+            <div class="row palindrome-stats">
+                <p>@successOrNot</p>
+                @Html.Raw(glyphForPalindrome)
+                <p>@Model.palindrome <em>@isOrIsNot</em> a palindrome!</p>
+            </div>
+            <div class="row display-results">
+                <p>
+                    <div class="col-md-2">
+                        Forward:
+                    </div>
+                    <div class="col-md-10">
+                        @Html.Raw(Model.palindromeResults[0])
+                    </div>
+                </p>
+            </div>
+            <div class="row display-results">
+                <p>
+                    <div class="col-md-2">
+                        Reverse:
+                    </div>
+                    <div class="col-md-10">
+                        @Html.Raw(Model.palindromeResults[1])
+                    </div>
+                </p>
+            </div>
+        }
+    </div>
+
+    <div class="row form-field-palindrome">
+        <div class="col-md-12">
+            <form method="get" id="submitPalindromeForm">
+                <div class="form-group">
+                    <label class="palindromeLabel" for="palindrome">Enter a whole number:</label>
+                    <input type="number" class="form-control" min="1" step="1" asp-for="palindrome" />
+                    <span class="text-danger" asp-validation-for="palindrome"></span>
+                </div>
+                <div class="row palindrome-buttons">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-default">Submit (server-side)</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-default" id="client-side-palindrome">Submit (client-side)</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/palindrome-checker.min.js"></script>
+}

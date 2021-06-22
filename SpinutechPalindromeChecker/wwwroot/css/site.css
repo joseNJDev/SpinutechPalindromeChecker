@@ -1,0 +1,129 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+/*Spinutech logo*/
+.navbar-header .logo {
+    background: url('../images/spinutech/spinutech-logo-2021.png');
+    background-size: 10em;
+    background-repeat: no-repeat;
+    padding: 0 7em;
+    /*border-right: .5em solid #fff;*/
+}
+
+/* Cookie bar */
+span.navbar-brand > .glyphicon-info-sign {
+    font-size: 1.5em;
+}
+
+/* Palindrome Styles */
+.palindrome-success {
+    color:green;
+}
+
+.palindrome-failure {
+    color:red
+}
+
+.palindromField {
+    text-align: center;
+    width: 80%;
+    background-color: #f6f6f6;
+    padding: 2em 2em 2em 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.palindromeLabel {
+    float: left;
+}
+
+.palindromField .btn {
+    margin: 2em 0 2em 0;
+}
+
+.display-results {
+    display: table-row;
+    padding-bottom: 5em;
+    font-size: 2em;
+}
+
+    .display-results div {
+        display: table-cell;
+        float: none;
+        padding-left: 0 !important;
+        text-align: left;
+    }
+
+.form-field-palindrome{
+    padding-top: 3em;
+}
+
+.palindrome-failure, .palindrome-success {
+    padding: .5em .5em .5em .5em;
+    border-left: 2pt solid black;
+}
+
+    .palindrome-failure:last-child, .palindrome-success:last-child {
+        border-right: 2pt solid black;
+    }
+
+.palindrome-stats {
+    margin-bottom: 2em;
+}
+
+.palindrome-stats p {
+    font-size: 3em;
+}
+
+span.palindrome-glyph-success {
+    font-size: 7em;
+    color: green;
+}
+
+span.palindrome-glyph-failure {
+    font-size: 7em;
+    color: red;
+}
+
+div#clientSidePalindrome {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.palindrom-buttons {
+    padding-bottom:2em;
+}
