@@ -127,3 +127,7 @@ div#clientSidePalindrome {
 .palindrom-buttons {
     padding-bottom:2em;
 }
+
+span#palindrome-error {
+    float: left;
+}

@@ -34,9 +34,9 @@
 
                             $('#api-content-1').html("<p>" + successPalindrome + "</p>" + glyphForPalindromePalindrome + "<p>" + returnData.submittedValue + " <em>" + isOrIsNotPalindrome + "</em> a palindrome!<p>");
 
-                            $('#api-content-2').html(returnData.forwardPalindromeResults);
+                            $('#api-content-2').html("<p><div class=\"col-md-2\">Forward: </div><div class=\"col-md-10\">" + returnData.forwardPalindromeResults + "</div></p></div>");
 
-                            $('#api-content-3').html(returnData.reversePalindromeResults);
+                            $('#api-content-3').html("<p><div class=\"col-md-2\">Reverse: </div><div class=\"col-md-10\">" + returnData.reversePalindromeResults + "</div></p></div>");
                         }
                     } else {
                         $('#api-content').text('Sorry, an error has occurred. Please make sure a whole number with less than 20 digits was entered and try again.')
