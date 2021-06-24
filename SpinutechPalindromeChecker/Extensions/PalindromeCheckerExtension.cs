@@ -28,13 +28,7 @@ namespace SpinutechPalindromeChecker.Extensions
             SplitIntoDigits.Reverse();
             int numberOfDigits = SplitIntoDigits.Count();
 
-            bool isEven = true;
             if (numberOfDigits % 2 != 0)
-            {
-                isEven = false;
-            }
-
-            if (!isEven)
             {
                 middleNumber = "<span class=\"palindrome-success\">" + SplitIntoDigits[numberOfDigits / 2].ToString() + "</span>";
                 SplitIntoDigits.RemoveAt(numberOfDigits / 2);
