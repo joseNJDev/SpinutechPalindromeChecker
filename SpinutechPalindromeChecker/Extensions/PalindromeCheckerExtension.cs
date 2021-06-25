@@ -9,7 +9,7 @@ namespace SpinutechPalindromeChecker.Extensions
     public class PalindromeCheckerExtension
     {
 
-        public string TestIfPalindrome(ulong submittedNumber)
+        public static string TestIfPalindrome(ulong submittedNumber)
         {
             string returnPalindrome = "";
             string forwardFirstHalf = "";

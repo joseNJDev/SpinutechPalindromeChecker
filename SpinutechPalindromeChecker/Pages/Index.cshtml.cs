@@ -30,9 +30,7 @@ namespace SpinutechPalindromeChecker.Pages
             }
             else if (ModelState["palindrome"].Errors.Count == 0)
             {
-                PalindromeCheckerExtension palindromeCheckerExtension = new PalindromeCheckerExtension();
-
-                string palindromeResponse = palindromeCheckerExtension.TestIfPalindrome(this.palindrome.Value);
+                string palindromeResponse = PalindromeCheckerExtension.TestIfPalindrome(this.palindrome.Value);
 
                 palindromeResults = palindromeResponse.Split(",");
 
