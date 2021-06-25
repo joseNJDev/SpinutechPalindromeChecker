@@ -14,7 +14,9 @@ namespace SpinutechPalindromeChecker.Api.Controllers
         [Route ("api/palindrome")]
         public JsonResult AjaxMethod(ulong input)
         {
-            palindromeResponse = PalindromeCheckerExtension.TestIfPalindrome(input);
+            PalindromeCheckerExtension palindromeCheckerExtension = new PalindromeCheckerExtension();
+
+            string palindromeResponse = palindromeCheckerExtension.TestIfPalindrome(input);
 
             if (palindromeResponse.Contains("palindrome-failure"))
             {
