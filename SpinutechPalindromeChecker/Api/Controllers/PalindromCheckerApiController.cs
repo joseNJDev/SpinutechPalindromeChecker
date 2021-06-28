@@ -8,7 +8,6 @@ namespace SpinutechPalindromeChecker.Api.Controllers
     public class PalindromCheckerApiController : Controller
     {
         public bool isAPalindrome = true;
-
         public string palindromeResponse = "";
 
         [Route ("api/palindrome")]
