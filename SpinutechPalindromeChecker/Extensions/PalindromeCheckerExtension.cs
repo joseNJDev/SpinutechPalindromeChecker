@@ -25,7 +25,6 @@ namespace SpinutechPalindromeChecker.Extensions
                 SplitIntoDigits.Add(submittedNumber % 10);
                 submittedNumber = submittedNumber / 10;
             }
-            SplitIntoDigits.Reverse();
             int numberOfDigits = SplitIntoDigits.Count();
 
             if (numberOfDigits % 2 != 0)
@@ -35,23 +34,24 @@ namespace SpinutechPalindromeChecker.Extensions
                 numberOfDigits = SplitIntoDigits.Count();
             }
 
-            for(int i = 0; i < numberOfDigits / 2; i++)
+            for (int i = 0; i < numberOfDigits / 2; i++)
             {
-                if(SplitIntoDigits[i] == SplitIntoDigits[numberOfDigits - (i + 1)])
+                if (SplitIntoDigits[i] == SplitIntoDigits[numberOfDigits - (i + 1)])
                 {
-                    forwardFirstHalf += "<span class=\"palindrome-success\">" + SplitIntoDigits[i].ToString() + "</span>";
-                    forwardSecondHalf = forwardSecondHalf.Insert(0, "<span class=\"palindrome-success\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>");
+                    forwardFirstHalf += "<span class=\"palindrome-success\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>";
+                    forwardSecondHalf = forwardSecondHalf.Insert(0, "<span class=\"palindrome-success\">" + SplitIntoDigits[i].ToString() + "</span>");
 
-                   reverseFirstHalf += "<span class=\"palindrome-success\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>";
-                   reverseSecondHalf = reverseSecondHalf.Insert(0, "<span class=\"palindrome-success\">" + SplitIntoDigits[i].ToString() + "</span>");
+                    reverseFirstHalf += "<span class=\"palindrome-success\">" + SplitIntoDigits[i].ToString() + "</span>";
+                    reverseSecondHalf = reverseSecondHalf.Insert(0, "<span class=\"palindrome-success\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>");
 
-                } else
+                }
+                else
                 {
-                    forwardFirstHalf += "<span class=\"palindrome-failure\">" + SplitIntoDigits[i].ToString() + "</span>";
-                    forwardSecondHalf = forwardSecondHalf.Insert(0, "<span class=\"palindrome-failure\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>");
+                    forwardFirstHalf += "<span class=\"palindrome-failure\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>";
+                    forwardSecondHalf = forwardSecondHalf.Insert(0, "<span class=\"palindrome-failure\">" + SplitIntoDigits[i].ToString() + "</span>");
 
-                    reverseFirstHalf += "<span class=\"palindrome-failure\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>";
-                    reverseSecondHalf = reverseSecondHalf.Insert(0, "<span class=\"palindrome-failure\">" + SplitIntoDigits[i].ToString() + "</span>");
+                    reverseFirstHalf += "<span class=\"palindrome-failure\">" + SplitIntoDigits[i].ToString() + "</span>";
+                    reverseSecondHalf = reverseSecondHalf.Insert(0, "<span class=\"palindrome-failure\">" + SplitIntoDigits[numberOfDigits - (i + 1)].ToString() + "</span>");
 
                 }
             }

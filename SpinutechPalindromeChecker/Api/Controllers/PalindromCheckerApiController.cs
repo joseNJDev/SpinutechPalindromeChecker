@@ -31,7 +31,7 @@ namespace SpinutechPalindromeChecker.Api.Controllers
                 reversePalindromeResults = palindromeResults[1]
             };
 
-            if(palindromeResponse != "")
+            if (palindromeResponse != "")
             {
                 palindromeCheckerApiModel.resultsReturned = true;
             }
