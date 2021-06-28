@@ -30,7 +30,8 @@ namespace SpinutechPalindromeChecker.Api.Controllers
                 reversePalindromeResults = palindromeResults[1]
             };
 
-            if (palindromeResponse != "")
+            //Used in palindrome-checker.js
+            if (palindromeResponse.Contains("palindrome-"))
             {
                 palindromeCheckerApiModel.resultsReturned = true;
             }
