@@ -68,7 +68,7 @@
                 <div class="form-group">
                     <label class="palindromeLabel" for="palindrome">Enter a whole number:</label>
                     <input type="number" class="form-control" min="1" step="1" asp-for="palindrome" />
-                    <span class="text-danger" asp-validation-for="palindrome"></span>
+                    <span role="alert" class="text-danger" style="display: flex" asp-validation-for="palindrome"></span>
                 </div>
                 <div class="row palindrome-buttons">
                     <div class="col-md-6">
